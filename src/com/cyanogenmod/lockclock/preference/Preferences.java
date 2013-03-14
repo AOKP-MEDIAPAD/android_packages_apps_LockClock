@@ -20,106 +20,72 @@ import java.util.List;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
-import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceFragment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListAdapter;
 
 import com.cyanogenmod.jsm.cmclockmod.R;
 
 public class Preferences extends PreferenceActivity {
 
-	// only used when adding a new widget
-	private int mNewWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
+    // only used when adding a new widget
+    private int mNewWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 
-	@Override
-	public void onBuildHeaders(List<Header> target) {
-		loadHeadersFromResource(R.xml.preferences_headers, target);
-		updateHeaders(target);
+    @Override
+    public void onBuildHeaders(List<Header> target) {
+        loadHeadersFromResource(R.xml.preferences_headers, target);
+        updateHeaders(target);
 
-		// Check if triggered from adding a new widget
-		Intent intent = getIntent();
-		if (intent != null
-				&& AppWidgetManager.ACTION_APPWIDGET_CONFIGURE.equals(intent
-						.getAction())) {
-			mNewWidgetId = intent.getIntExtra(
-					AppWidgetManager.EXTRA_APPWIDGET_ID, mNewWidgetId);
-			// See http://code.google.com/p/android/issues/detail?id=2539
-			myResult(RESULT_CANCELED);
-		}
-	}
+        // Check if triggered from adding a new widget
+        Intent intent = getIntent();
+        if (intent != null
+                && AppWidgetManager.ACTION_APPWIDGET_CONFIGURE.equals(intent.getAction())) {
+            mNewWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mNewWidgetId);
+            // See http://code.google.com/p/android/issues/detail?id=2539
+            myResult(RESULT_CANCELED);
+        }
+    }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.options_menu, menu);
-		return true;
-	}
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+        return true;
+    }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle item selection
-		switch (item.getItemId()) {
-		case R.id.menu_done:
-			myResult(RESULT_OK);
-			finish();
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu_done:
+                myResult(RESULT_OK);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
-	@Override
-	public void onBackPressed() {
-		// If launched from the configure intent, signal RESULT_OK
-		myResult(RESULT_OK);
-		super.onBackPressed();
-	}
+    @Override
+    public void onBackPressed() {
+        // If launched from the configure intent, signal RESULT_OK
+        myResult(RESULT_OK);
+        super.onBackPressed();
+    }
 
-	private void myResult(int result) {
-		if (mNewWidgetId != AppWidgetManager.INVALID_APPWIDGET_ID) {
-			setResult(result, new Intent().putExtra(
-					AppWidgetManager.EXTRA_APPWIDGET_ID, mNewWidgetId));
-		}
-	}
+    private void myResult(int result) {
+        if (mNewWidgetId != AppWidgetManager.INVALID_APPWIDGET_ID) {
+            setResult(result, new Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mNewWidgetId));
+        }
+    }
 
-	private void updateHeaders(List<Header> headers) {
-		int i = 0;
-
-		while (i < headers.size()) {
-			Header header = headers.get(i);
-			i++;
-		}
-	}
-
-	public static class ClockFragment extends PreferenceFragment {
-		@Override
-		public void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-
-			addPreferencesFromResource(R.xml.preferences_clock);
-
-		}
-	}
-
-	public static class WeatherFragment extends PreferenceFragment {
-		@Override
-		public void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-
-			addPreferencesFromResource(R.xml.preferences_weather);
-		}
-	}
-
-	public static class CalendarFragment extends PreferenceFragment {
-		@Override
-		public void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-
-			addPreferencesFromResource(R.xml.preferences_calendar);
-		}
-	}
-
+    private void updateHeaders(List<Header> headers) {
+        int i = 0;
+        while (i < headers.size()) {
+            Header header = headers.get(i);
+            i++;
+        }
+    }
 }

@@ -21,8 +21,8 @@
     <string name="unknown">Unknown</string>
     <string name="cancel">Cancel</string>
     <string name="loading_indicator">Loading widget\u2026</string>
-	<string name="menu_done">Done</string>
-	
+    <string name="menu_done">Done</string>
+
     <!-- Formating strings for widget clock -->
     <string name="widget_12_hours_format_h" translatable="false">h</string>
     <string name="widget_12_hours_format_no_ampm_m" translatable="false">:mm</string>
@@ -142,8 +142,8 @@
     <string name="weather_retrieve_location_dialog_enable_button">Enable</string>
     <string name="weather_invert_lowhigh">Invert low/high temperatures</string>
     <string name="weather_progress_title">Verifying location</string>
-    <string name="weather_alternate_icons_title">Use alternate icons</string>
-    <string name="weather_alternate_icons_summary">Select to toggle between the default (White) and the alternate (Color) icons</string>
+    <string name="weather_alternate_icons_title">Use color icons</string>
+    <string name="weather_alternate_icons_summary">Select to toggle between the default (Color) and the alternate (White) icons</string>
     <string name="weather_show_when_minimized_title">Show when minimized</string>
     <string name="weather_show_when_minimized_summary">Display summary weather information when the widget is minimized</string>
 
@@ -157,6 +157,12 @@
     <string name="calendar_lookahead_title">Event lookahead</string>
     <string name="calendar_show_location_title">Event location</string>
     <string name="calendar_show_description_title">Event description</string>
+
+    <!-- Preferences - Font colors -->
+    <string name="font_color">Font color</string>
+    <string name="font_color_alarm">Alarm font color</string>
+    <string name="font_color_timestamp">Timestamp font color</string>
+    <string name="font_color_calendar_details">Details font color</string>
 
     <!-- Calendar - lookahead -->
     <string name="calendar_lookahead_3hrs">3 hours</string>
@@ -172,5 +178,20 @@
     <string name="calendar_metadata_none">Do not show</string>
     <string name="calendar_metadata_first_line">Show first line</string>
     <string name="calendar_metadata_all">Show all</string>
+
+    <!-- Font colors -->
+    <string name="white">White</string>
+    <string name="grey">Grey</string>
+    <string name="black">Black</string>
+    <string name="holo_blue_light">Light blue</string>
+    <string name="holo_green_light">Light green</string>
+    <string name="holo_red_light">Light red</string>
+    <string name="holo_blue_dark">Dark blue</string>
+    <string name="holo_green_dark">Dark green</string>
+    <string name="holo_red_dark">Dark red</string>
+    <string name="holo_purple">Purple</string>
+    <string name="holo_orange_light">Light orange</string>
+    <string name="holo_orange_dark">Dark orange</string>
+    <string name="holo_blue_bright">Bright blue</string>
 
 </resources>

@@ -134,8 +134,10 @@
     <string name="weather_retrieve_location_dialog_enable_button">Включить</string>
     <string name="weather_invert_lowhigh">Изменить порядок температур</string>
     <string name="weather_progress_title">Проверка местоположения</string>
-    <string name="weather_alternate_icons_title">Альтернативные иконки</string>
-    <string name="weather_alternate_icons_summary">Выбор между иконками по умолчанию (белые) или альтернативными (цветные)</string>
+    <string name="weather_alternate_icons_title">Цветные иконки</string>
+    <string name="weather_alternate_icons_summary">Выбор между иконками по умолчанию (цветные) или альтернативными (белые)</string>
+    <string name="weather_show_when_minimized_title">Показывать всегда</string>
+    <string name="weather_show_when_minimized_summary">Отображать погоду, когда виджет в свёрнутом состоянии</string>
 
     <!-- Preferences - Calendar -->
     <string name="calendar_title">Показывать события</string>
@@ -147,6 +149,12 @@
     <string name="calendar_lookahead_title">Предпросмотр события</string>
     <string name="calendar_show_location_title">Место проведения</string>
     <string name="calendar_show_description_title">Описание события</string>
+
+    <!-- Preferences - Font colors -->
+    <string name="font_color">Цвет шрифта</string>
+    <string name="font_color_alarm">Будильник</string>
+    <string name="font_color_timestamp">Дата</string>
+    <string name="font_color_calendar_details">Календарь</string>
 
     <!-- Calendar - lookahead -->
     <string name="calendar_lookahead_3hrs">3 часа</string>
@@ -160,5 +168,20 @@
     <string name="calendar_metadata_none">Не показывать</string>
     <string name="calendar_metadata_first_line">Показывать первую строку</string>
     <string name="calendar_metadata_all">Показывать всё</string>
+
+    <!-- Font colors -->
+    <string name="white">Белый</string>
+    <string name="grey">Серый</string>
+    <string name="black">Чёрный</string>
+    <string name="holo_blue_light">Голубой</string>
+    <string name="holo_green_light">Светло-зелёный</string>
+    <string name="holo_red_light">Светло-красный</string>
+    <string name="holo_blue_dark">Синий</string>
+    <string name="holo_green_dark">Тёмно-зелёный</string>
+    <string name="holo_red_dark">Тёмно-красный</string>
+    <string name="holo_purple">Фиолетовый</string>
+    <string name="holo_orange_light">Светло-оранжевый</string>
+    <string name="holo_orange_dark">Тёмно-оранжевый</string>
+    <string name="holo_blue_bright">Ярко-синий</string>
 
 </resources>
