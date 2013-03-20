@@ -91,7 +91,10 @@
     <string name="weather_SW">SW</string>
     <string name="weather_W">W</string>
     <string name="weather_NW">NW</string>
-
+	 
+	<!-- Weather - special char -->
+	<string name="weather_special_deg">&#176;</string>
+	
     <!-- Weather - error messages -->
     <string name="weather_no_data">No data</string>
     <string name="weather_tap_to_refresh">Tap to refresh</string>

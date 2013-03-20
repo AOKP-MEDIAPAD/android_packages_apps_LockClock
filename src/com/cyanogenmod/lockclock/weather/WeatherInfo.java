@@ -112,15 +112,15 @@ public class WeatherInfo {
     }
 
     public String getFormattedTemperature() {
-        return getFormattedValue(temperature, "°" + tempUnit);
+        return getFormattedValue(temperature, mContext.getString(R.string.weather_special_deg) + tempUnit);
     }
 
     public String getFormattedLow() {
-        return getFormattedValue(lowTemperature, "°");
+        return getFormattedValue(lowTemperature, mContext.getString(R.string.weather_special_deg));
     }
 
     public String getFormattedHigh() {
-        return getFormattedValue(highTemperature, "°");
+        return getFormattedValue(highTemperature, mContext.getString(R.string.weather_special_deg));
     }
 
     public String getFormattedHumidity() {
