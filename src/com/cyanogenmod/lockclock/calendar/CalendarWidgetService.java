@@ -36,7 +36,7 @@ import android.widget.RemoteViewsService.RemoteViewsFactory;
 
 import com.cyanogenmod.lockclock.ClockWidgetProvider;
 import com.cyanogenmod.lockclock.ClockWidgetService;
-import com.cyanogenmod.lockclock.R;
+import com.cyanogenmod.jsm.cmclockmod.R;
 import com.cyanogenmod.lockclock.misc.CalendarInfo;
 import com.cyanogenmod.lockclock.misc.CalendarInfo.EventInfo;
 import com.cyanogenmod.lockclock.misc.Constants;
