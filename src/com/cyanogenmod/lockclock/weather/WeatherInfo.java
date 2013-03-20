@@ -27,8 +27,6 @@ import java.text.DecimalFormat;
 import java.util.Date;
 
 public class WeatherInfo {
-    private static final long serialVersionUID = 1L;
-
     private static final DecimalFormat sNoDigitsFormat = new DecimalFormat("0");
 
     private Context mContext;
@@ -114,15 +112,15 @@ public class WeatherInfo {
     }
 
     public String getFormattedTemperature() {
-        return getFormattedValue(temperature, "Â°" + tempUnit);
+        return getFormattedValue(temperature, "°" + tempUnit);
     }
 
     public String getFormattedLow() {
-        return getFormattedValue(lowTemperature, "Â°");
+        return getFormattedValue(lowTemperature, "°");
     }
 
     public String getFormattedHigh() {
-        return getFormattedValue(highTemperature, "Â°");
+        return getFormattedValue(highTemperature, "°");
     }
 
     public String getFormattedHumidity() {
