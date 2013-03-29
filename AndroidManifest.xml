@@ -16,8 +16,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cyanogenmod.jsm.cmclockmod"
-    android:versionCode="6"
-    android:versionName="2.2.0" >
+    android:versionCode="7"
+    android:versionName="2.2.1" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -74,7 +74,6 @@
 
         <service android:name="com.cyanogenmod.lockclock.ClockWidgetService"></service>
         <service android:name="com.cyanogenmod.lockclock.weather.WeatherUpdateService"></service>
-
          <service android:name="com.cyanogenmod.lockclock.calendar.CalendarWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS">
         </service>

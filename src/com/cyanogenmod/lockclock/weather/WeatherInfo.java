@@ -80,7 +80,7 @@ public class WeatherInfo {
         final Resources res = mContext.getResources();
         int resId = res.getIdentifier("weather_" + conditionCode, "drawable", mContext.getPackageName());
         if (resId == 0) {
-            resId = res.getInteger(R.drawable.weather_na);
+            resId = R.drawable.weather_na;
         }
         return WidgetUtils.getOverlaidBitmap(mContext, resId, color);
     }
